@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syncopate:wght@400;700&family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Italiana&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syncopate:wght@400;700&family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
+
+:root {
+    --primary : #2E4053;
+    --secondary: #BFC9CA;
+    --one : #AAB7B8;
+    --two : #D5D8DC;
+    --three : #F1C40F;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    margin : 5px;
+}
+
+section {
+    display: flex;
+    flex-direction : column;
+}
+
+body {
+    background-color: var(--two);
+    padding : 50px;
+    color: var(--three);
+}
+
+.product {
+    background-color: var(--primary);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.product:hover {
+    background-color: #243241;
+}
+
+img {
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+h3 {
+    grid-row: 1/2;
+    grid-column: 3/5;
+    font-family: 'Italiana', sans-serif;
+}
+
+p {
+    grid-row : 2/3;
+    grid-column: 3/5;
+    font-family: "Antic Didone", serif;
+}
+
+.rating {
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+
+.buy {
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    grid-row : 3/4;
+    grid-column : 3/5;
+}
+
+button {
+    background-color: var(--three);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+svg {
+    fill: var(--primary);
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    line-height: 500px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+dialog::backdrop {
+    filter: blur(20px);
+}
